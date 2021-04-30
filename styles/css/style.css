@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-image: url(../img/desk.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+a {
+    color: inherit;
+}
+
+main section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 13px 7px rgba(156, 156, 156, 0.671);
+}
+
+.boxConnexion {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1efea;
+}
+
+.boxConnexion .title {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #ffd04e;
+}
+
+.boxConnexion #error {
+    margin: 15px 0;
+    color: #f06363;
+    font-size: 12px;
+}
+
+.boxConnexion form {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boxConnexion form input {
+    width: 250px;
+    padding: 5px 10px;
+    background-color: #0000000a;
+    border: #252525 1px solid;
+    outline: none;
+}
+
+.boxConnexion form input[type=button]:hover {
+    background-color: #ffd04e;
+    cursor: pointer;
+}
+
+.boxConnexion a {
+    font-size: 12px;
+    margin-top: 40px;
+    padding-bottom: 10px;
+}
