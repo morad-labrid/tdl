@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
-<<<<<<< HEAD
--- Généré le : ven. 30 avr. 2021 à 17:08
-=======
--- Généré le : mer. 28 avr. 2021 à 11:27
->>>>>>> master
+-- Généré le : mer. 26 mai 2021 à 07:13
 -- Version du serveur :  5.7.32
 -- Version de PHP : 7.4.12
 
@@ -29,11 +25,7 @@ CREATE TABLE `mission` (
   `title` varchar(255) DEFAULT NULL,
   `dateCreate` date DEFAULT NULL,
   `deadLine` date DEFAULT NULL,
-<<<<<<< HEAD
   `tableto` varchar(255) DEFAULT NULL,
-=======
-  `table` varchar(255) DEFAULT NULL,
->>>>>>> master
   `idUser` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -41,7 +33,6 @@ CREATE TABLE `mission` (
 -- Déchargement des données de la table `mission`
 --
 
-<<<<<<< HEAD
 INSERT INTO `mission` (`id`, `title`, `dateCreate`, `deadLine`, `tableto`, `idUser`) VALUES
 (1, 'Cree un todolist', '2021-01-20', '2021-04-28', 'todo', 4),
 (3, 'Faire les courses', '2021-01-27', '2021-05-27', 'todo', 4),
@@ -59,7 +50,10 @@ INSERT INTO `mission` (`id`, `title`, `dateCreate`, `deadLine`, `tableto`, `idUs
 (25, 'Vase', '2021-04-28', '2021-05-04', 'todo', 4),
 (26, 'Mini-Chaise Rond', '2021-04-28', '2021-05-07', 'freeTime', 4),
 (27, 'Mini-Chaise Rond', '2021-04-28', '2021-04-29', 'todo', 4),
-(28, 'LAPLATEFORME', '2021-04-29', '2021-05-07', 'todo', 4);
+(28, 'LAPLATEFORME', '2021-04-29', '2021-05-07', 'todo', 4),
+(29, 'test', '2021-05-04', '2021-05-07', 'todo', 4),
+(30, 'nhfhf', '2021-05-19', '2021-05-27', 'todo', 4),
+(31, 'les courses', '2021-05-26', '2021-05-28', 'todo', 4);
 
 -- --------------------------------------------------------
 
@@ -81,7 +75,7 @@ CREATE TABLE `task` (
 INSERT INTO `task` (`id`, `description`, `status`, `idMission`) VALUES
 (1, '10 kilo de pomme de terre', 1, 3),
 (2, '3 chips de frommage', 0, 3),
-(3, '5 kilo de tomate', 0, 3),
+(3, '5 kilo de tomate', 1, 3),
 (4, 'faire une maquette', 0, 1),
 (5, '2 pasteques', 0, 3),
 (6, 'faire la partie front', 1, 1),
@@ -94,12 +88,16 @@ INSERT INTO `task` (`id`, `description`, `status`, `idMission`) VALUES
 (13, '', 0, 22),
 (14, '', 0, 19),
 (15, '', 0, 20),
-(16, 'azdazd', 1, 25),
+(16, 'azdazd', 0, 25),
 (17, '', 1, 24),
 (18, 'siiganle 1', 0, 23),
-(19, 'azdazd', 0, 26),
-(20, 'ergerg', 0, 26),
-(21, 'je veux une grande salle avec ', 0, 21);
+(19, 'azdazd', 1, 26),
+(20, 'ergerg', 1, 26),
+(21, 'je veux une grande salle avec ', 1, 21),
+(22, 'tache 1', 1, 29),
+(23, 'appel nadir', 1, 29),
+(24, 'appel le a 19H', 1, 29),
+(25, '', 1, 20);
 
 -- --------------------------------------------------------
 
@@ -126,16 +124,6 @@ INSERT INTO `user` (`id`, `username`, `email`, `password`) VALUES
 (7, 'hachim', 'hachim@fouadi.com', '$2y$10$Do0TvgEKUK/aK5q4U9Er2uFf1o0GW0IF8V3EN1aHbJqpefoBjxal.'),
 (8, 'yassine', 'yassine@labrid.com', '$2y$10$TJscR1UvKGO5Jpd/KVoU5ePbz10yjGkrkZKwdZowo.7B9cYRqd4TW'),
 (9, 'karima', 'karima@labrid.com', '$2y$10$21T0s48Qb3m3LTMWCU1mXeX0twu2.f0lUBOVFXuXq5vCmg1jgaKFy');
-=======
-INSERT INTO `mission` (`id`, `title`, `dateCreate`, `deadLine`, `table`, `idUser`) VALUES
-(1, 'Cree un todolist', '2021-01-20', '2021-04-28', 'todo', 3),
-(3, 'Faire les courses', '2021-01-27', '2021-05-27', 'todo', 3),
-(4, 'achat accessoires voiture', '2021-04-23', '2021-06-27', 'freeTime', 3),
-(5, 'Site Wordpress', '2021-03-27', '2021-04-17', 'todo', 3),
-(6, 'faire sport', '2021-04-10', '2021-04-30', 'freeTime', 3),
-(7, 'test', '2021-04-28', '2021-05-05', 'todo', 3),
-(8, 'Mini-Chaise Rond', '2021-04-28', '2021-05-04', 'todo', 3);
->>>>>>> master
 
 --
 -- Index pour les tables déchargées
@@ -149,7 +137,6 @@ ALTER TABLE `mission`
   ADD KEY `idUser` (`idUser`);
 
 --
-<<<<<<< HEAD
 -- Index pour la table `task`
 --
 ALTER TABLE `task`
@@ -163,8 +150,6 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
-=======
->>>>>>> master
 -- AUTO_INCREMENT pour les tables déchargées
 --
 
@@ -172,23 +157,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `mission`
 --
 ALTER TABLE `mission`
-<<<<<<< HEAD
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT pour la table `task`
 --
 ALTER TABLE `task`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-=======
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
->>>>>>> master
 
 --
 -- Contraintes pour les tables déchargées
@@ -199,12 +180,9 @@ ALTER TABLE `user`
 --
 ALTER TABLE `mission`
   ADD CONSTRAINT `mission_ibfk_1` FOREIGN KEY (`idUser`) REFERENCES `user` (`id`);
-<<<<<<< HEAD
 
 --
 -- Contraintes pour la table `task`
 --
 ALTER TABLE `task`
   ADD CONSTRAINT `task_ibfk_1` FOREIGN KEY (`idMission`) REFERENCES `mission` (`id`);
-=======
->>>>>>> master
